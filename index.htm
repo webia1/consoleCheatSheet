@@ -127,7 +127,7 @@
                 <h2 class="monospace">console.info</h2>
                 <p>Informative logging output with info icon in front.</p>
                 <h3>Syntax</h3>
-                <pre>console.info(msg [, msg1, ..., msgN]);</pre>
+                <pre class="syntax">console.info(msg [, msg1, ..., msgN]);</pre>
                 <h3>Example</h3>
                 <pre>console.info('Mr. Dump is not', 2, 'smart');</pre>
                 <div class="bar">
@@ -142,7 +142,7 @@
                 <h2 class="monospace">console.log</h2>
                 <p>Output a Logging message without icon.</p>
                 <h3>Syntax</h3>
-                <pre>console.log(msg [, msg1, ..., msgN]);</pre>
+                <pre class="syntax">console.log(msg [, msg1, ..., msgN]);</pre>
                 <h3>Example</h3>
                 <pre>console.log('Mr. Dump is not', 2, {property: 'smart'});</pre>
                 <div class="bar">
@@ -162,7 +162,7 @@
                     </ul>
                 </p>
                 <h3>Syntax</h3>
-                <pre>console.dir(object);</pre>
+                <pre class="syntax">console.dir(object);</pre>
                 <h3>Example</h3>
                 <pre>console.dir({property: 'smart'});</pre>
                 <div class="bar">
@@ -177,7 +177,7 @@
                 <h2 class="monospace">console.warn</h2>
                 <p>Outputs a warning message with warn icon in front. Useful when informating the user on usage deprecated methods.</p>
                 <h3>Syntax</h3>
-                <pre>console.warn(msg [, msg1, ..., msgN]);</pre>
+                <pre class="syntax">console.warn(msg [, msg1, ..., msgN]);</pre>
                 <h3>Example</h3>
                 <pre>console.warn('Mr. Dump is not %d smart.', 2);</pre>
                 <div class="bar">
@@ -193,7 +193,7 @@
                 <h2 class="monospace">console.error</h2>
                 <p>Outputs a warning message with warn icon in front. Useful when informating the user on usage deprecated methods.</p>
                 <h3>Syntax</h3>
-                <pre>console.error(msg [, msg1, ..., msgN]);</pre>
+                <pre class="syntax">console.error(msg [, msg1, ..., msgN]);</pre>
                 <h3>Example</h3>
                 <pre>console.error('Mr. Dump is not %d smart.', 2);</pre>
                 <div class="bar">
@@ -210,7 +210,7 @@
                 <p>Writes an error message to the console if the assertion is false. If the assertion is true, nothing happens.</p>
                 <p class="note"><strong>Note:</strong> Specifically, in browsers, calling console.assert() with a falsy assertion will cause the message to be printed to the console without interrupting execution of subsequent code. In Node.js, however, a falsy assertion will cause an AssertionError to be thrown.</p>
                 <h3>Syntax</h3>
-                <pre>console.assert(assertion, msg1 [, msg2, ..., msgN]);</pre>
+                <pre class="syntax">console.assert(assertion, msg1 [, msg2, ..., msgN]);</pre>
                 <h3>Example</h3>
                 <pre>
 function greaterThan(a,b) {
@@ -236,7 +236,7 @@ greaterThan(5,6);</pre>
                     <strong>Note</strong> that in Google Chrome console.table require data with 2 dimensions. The first represent always the index.
                 </p>
                 <h3>Syntax</h3>
-                <pre>console.table(data [, [column1, ..., columnN] ]);</pre>
+                <pre class="syntax">console.table(data [, [column1, ..., columnN] ]);</pre>
                 <h3>Example 1</h3>
                 <pre>
 // array of strings
@@ -323,14 +323,14 @@ console.table(family, ["firstName", "age"]);</pre>
                 <h2 class="monospace">console.clear</h2>
                 <p>Clears the console. <br>If in Chrome the <strong>Preserve log</strong> checkbox is enabled, <code>console.clear()</code> is disabled.</p>
                 <h3>Syntax</h3>
-                <pre>console.clear();</pre>
+                <pre class="syntax">console.clear();</pre>
             </article>
             <!-- console.count -->
             <article class="grid-item">
                 <h2 class="monospace">console.count</h2>
                 <p>Writes the number of times that count() has been invoked at the same line and with the same label. This function takes an optional argument label</p>
                 <h3>Syntax</h3>
-                <pre>console.count();</pre>
+                <pre class="syntax">console.count();</pre>
                 <h3>Example</h3>
                 <pre>
 function login(name) {

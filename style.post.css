@@ -43,7 +43,7 @@ body {
         text-align: left;
         font-size: 1.1rem;
         font-weight: 700;
-        color: var(--color-caption);
+        -color: var(--color-caption);
         padding: 5px 10px;
     }
     th,
@@ -124,6 +124,7 @@ main {
         background-color: rgb(246, 247, 249);
         box-sizing: border-box;
         font-size: 10px;
+        overflow: hidden;
 
         &.transparent {
             background-color: rgb(255, 255, 255);
@@ -151,13 +152,15 @@ main {
         font-family: sans-serif;
         line-height: 1;
         color: var(--color-caption);
-        padding: .625em 0;
-        margin: 0;
+        padding: .625em 0 .3125em 0;
+        margin: 0 0 .3125em 0;
 
         &.monospace {
             font-family: monospace;
-            font-size:  1.4em;
+            font-size:  1.6em;
+            line-height: 1;
             color: rgb(0,0,0);
+            border-bottom: 1px dotted rgb(170, 170, 170);
         }
     }
 
@@ -173,11 +176,16 @@ main {
     pre {
         margin: 0 0 .625em 0;
         font-size: .9em;
-        color: var(--color-font-monospace);
+        color: rgb(0, 0, 0);
         background-color: rgb(255, 255, 255);
         padding: .625em;
         border-left: 5px solid rgb(75, 127, 179);
         overflow: scroll;
+
+        &.syntax {
+            background-color: rgb(215, 224, 230);
+            color: rgb(0, 0, 0);
+        }
     }
 
     ul {
@@ -194,22 +202,16 @@ main {
         font-size: 1em;
         margin: .625em 0;
         padding: .625em;
-        border: 1px dotted var(--color-green);
-        border-left: 5px solid var(--color-green);
+        border: 1px dotted rgb(228, 228, 228);
+        border-left: 5px solid rgb(228, 228, 228);
         background-color: rgb(255, 255, 255);
 
         &.yellow {
             background-color: var(--color-light-yellow);
-            border-color: var(--color-yellow);
         }
 
         &.red {
             background-color: var(--color-light-red);
-            border-color: var(--color-red);
-        }
-
-        &.blue {
-            border-color: var(--color-blue);
         }
 
         .blue {
