@@ -73,12 +73,14 @@ body {
 
 
 header {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-content: stretch;
     padding: 20px;
+    overflow: hidden;
 
     .title {
         flex: 0 1 auto;
