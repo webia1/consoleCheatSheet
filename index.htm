@@ -353,7 +353,7 @@ login("Bob");
                     <span class="blue">Bob logged in: 3</span>
                 </div>
             </article>
-
+            <!-- console.time -->
             <article class="grid-item">
                 <h2 class="monospace">console.time</h2>
                 <p>
@@ -400,6 +400,71 @@ console.timeEnd('total');
                 <h3>Output</h3>
                 <div class="output">
                     <span class="blue">init arr: 0.0720ms</span><br><span class="blue">total: 4.34ms</span>
+                </div>
+            </article>
+            <!-- console.group -->
+            <article class="grid-item">
+                <h2 class="monospace">console.group</h2>
+                <p>
+                    Starts a new group. Call console.groupEnd() to stop the timer and print the elapsed
+                    time to the Console.<br>You can also nest groups.
+                </p>
+                <h3>Syntax</h3>
+                <pre class="syntax">
+console.group(msg [, msg1, ..., msgN]);
+...
+console.groupEnd(msg [, msg1, ..., msgN]);
+                </pre>
+                <h3>Example</h3>
+                <pre>
+function name(obj) {
+    console.group('name');
+    console.log('first: ', obj.first);
+    console.log('middle: ', obj.middle);
+    console.log('last: ', obj.last);
+    console.groupEnd();
+}
+
+name({"first":"Wile","middle":"E","last":"Coyote"});
+                </pre>
+                <div class="bar">
+                    <button onclick="testGroup()">Test in your browser</button>
+                </div>
+                <h3>Output</h3>
+                <div class="output">
+                    <i class="fa fa-caret-down grey" aria-hidden="true"></i> <strong>name</strong><br>
+                    <span class="tab"></span>first:  Wile<br>
+                    <span class="tab"></span>middle:  E<br>
+                    <span class="tab"></span>last:  Coyote<br>
+                </div>
+                <h3>Example nested usage</h3>
+                <pre>
+function name(obj) {
+    console.group('name');
+    console.log('first: ', obj.first);
+    console.log('middle: ', obj.middle);
+    console.log('last: ', obj.last);
+    console.groupEnd();
+}
+
+function doStuff() {
+    console.group('doStuff()');
+    name({"first":"Wile","middle":"E","last":"coyote"});
+    console.groupEnd();
+}
+
+doStuff();
+                </pre>
+                <div class="bar">
+                    <button onclick="testGroupNested()">Test in your browser</button>
+                </div>
+                <h3>Output</h3>
+                <div class="output">
+                    <i class="fa fa-caret-down grey" aria-hidden="true"></i> <strong>doStuff()</strong><br>
+                    <span class="tab"></span><i class="fa fa-caret-down grey" aria-hidden="true"></i> <strong>name</strong><br>
+                    <span class="tab"></span><span class="tab"></span>first:  Wile<br>
+                    <span class="tab"></span><span class="tab"></span>middle:  E<br>
+                    <span class="tab"></span><span class="tab"></span>last:  Coyote<br>
                 </div>
             </article>
         </main>
