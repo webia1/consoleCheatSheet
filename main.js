@@ -20,3 +20,14 @@ function tableMethod() {
 
     console.table(family, ["firstName", "age"]);
 }
+
+function testCount() {
+    function login(name) {
+      console.count(name + ' logged in');
+    }
+
+    login("Bob");
+    login("Mike");
+    login("Bob");
+    login("Bob");
+}
