@@ -409,6 +409,7 @@ console.timeEnd('total');
                     Starts a new group. Call console.groupEnd() to stop the timer and print the elapsed
                     time to the Console.<br>You can also nest groups.
                 </p>
+                <p class="note">To display created group collapsed use <strong>console.groupCollapsed</strong></p>
                 <h3>Syntax</h3>
                 <pre class="syntax">
 console.group(msg [, msg1, ..., msgN]);
@@ -466,6 +467,17 @@ doStuff();
                     <span class="tab"></span><span class="tab"></span>middle:  E<br>
                     <span class="tab"></span><span class="tab"></span>last:  Coyote<br>
                 </div>
+            </article>
+            <!-- console.groupCollapsed -->
+            <article class="grid-item">
+                <h2 class="monospace">console.groupCollapsed</h2>
+                <p>Creates a new inline group in the Web Console. Unlike <code>console.group()</code>, however, the new group is created collapsed. The user will need to use the disclosure button next to it to expand it, revealing the entries created in the group.</p>
+                <h3>Syntax</h3>
+                <pre class="syntax">
+console.groupCollapsed(msg [, msg1, ..., msgN]);
+...
+console.groupEnd(msg [, msg1, ..., msgN]);
+                </pre>
             </article>
         </main>
         <footer>
