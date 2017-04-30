@@ -1,0 +1,17 @@
+{
+  "name": "console_cheat_sheet",
+  "version": "1.0.0",
+  "description": "Javascript cheat sheet for console methods",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "console",
+    "cheat",
+    "sheet"
+  ],
+  "author": "Jan Nahody <jan.nahody@gmail.com>",
+  "license": "ISC"
+}

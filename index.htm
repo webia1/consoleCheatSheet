@@ -1,0 +1,230 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>JavaScript Console Cheat Sheet 1.0.0</title>
+        <meta name="description" content="JavaScript Console Cheat Sheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <header class="header">
+    <div class="jsLogo">JS</div>
+    <div class="title">
+        CONSOLE<br>
+        <small>CHEAT SHEET</small>
+    </div>
+    <div class="middle"></div>
+    <div class="setSize">
+        <input id="sizeSlider" type="range" min="5" max="20" step="1" value ="10" onchange="resizeArticle(this.value)">
+    </div>
+</header>
+<main>
+    <article class="transparent">
+       <table class="infoTable">
+           <thead>
+               <caption>Console methods overview</caption>
+               <tr>
+                   <th>Methods</th>
+                   <th>Description</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td>console.info()</td>
+                   <td>Informative logging output with info icon in front.</td>
+               </tr>
+               <tr>
+                   <td>console.log()</td>
+                   <td>Output a Logging message without icon.</td>
+               </tr>
+               <tr>
+                   <td>console.dir()</td>
+                   <td>Displays an interactive listing of the properties of a specified JavaScript object. This listing lets you use disclosure triangles to examine the contents of child objects.</td>
+               </tr>
+               <tr>
+                   <td>console.debug()</td>
+                   <td>Alias for <code>console.log</code>.</td>
+               </tr>
+               <tr>
+                   <td>console.warn()</td>
+                   <td>Outputs a warning message with warn icon in front.</td>
+               </tr>
+               <tr>
+                   <td>console.error()</td>
+                   <td>Outputs an error message with error icon in front.</td>
+               </tr>
+               <tr>
+                   <td>console.assert()</td>
+                   <td>Log a message and stack trace to console if first argument is false</td>
+               </tr>
+               <tr>
+                   <td class="group">console.group()</td>
+                   <td>Creates a new inline group, indenting all following output by another level. To move back out a level, call groupEnd()</td>
+               </tr>
+               <tr>
+                   <td class="group">console.groupCollapsed()</td>
+                   <td>Creates a new inline group, indenting all following output by another level; unlike group(), this starts with the inline group collapsed, requiring the use of a disclosure button to expand it. To move back out a level, call groupEnd().</td>
+               </tr>
+               <tr>
+                   <td class="group">console.groupEnd()</td>
+                   <td>Exits the current inline group</td>
+               </tr>
+               <tr>
+                   <td>console.clear()</td>
+                   <td>Clear the console</td>
+               </tr>
+               <tr>
+                   <td class="group">console.time()</td>
+                   <td>Starts a timer with a name specified as an input parameter. Up to 10,000 simultaneous timers can run on a given page</td>
+               </tr>
+               <tr>
+                   <td class="group">console.timeEnd()</td>
+                   <td>Stops the specified timer and logs the elapsed time in seconds since its start.</td>
+               </tr>
+               <tr>
+                   <td>console.table()</td>
+                   <td>Clear the console</td>
+               </tr>
+           </tbody>
+       </table>
+    </article>
+
+    <!-- console.info -->
+    <article>
+        <h2 class="monospace">console.info</h2>
+        <p>Informative logging output with info icon in front.</p>
+        <h3>Syntax</h3>
+        <pre>console.info(msg [, msg1, ..., msgN]);</pre>
+        <h3>Example</h3>
+        <pre>console.info('Mr. Dump is not', 2, 'smart');</pre>
+        <div class="bar">
+            <button onclick="console.info('Mr. Dump is not', 2, 'smart');">Test in your browser</button>
+        </div>
+        <p>The output looks like this:</p>
+        <div class="output blue">
+            <i class="fa fa-info-circle blue" aria-hidden="true"></i> Mr. Dump is not <span class="blue">2</span> smart</div>
+    </article>
+    <!-- console.log -->
+    <article>
+        <h2 class="monospace">console.log</h2>
+        <p>Output a Logging message without icon.</p>
+        <h3>Syntax</h3>
+        <pre>console.log(msg [, msg1, ..., msgN]);</pre>
+        <h3>Example</h3>
+        <pre>console.log('Mr. Dump is not', 2, {property: 'smart'});</pre>
+        <div class="bar">
+            <button onclick="console.log('Mr. Dump is not', 2, {property: 'smart'});">Test in your browser</button>
+        </div>
+        <p>The output looks like this:</p>
+        <div class="output">
+            Mr. Dump is not <span class="blue">2</span> <i class="fa fa-caret-right grey" aria-hidden="true"></i> Object {<span class="violet">property</span>: <span class="red">"<i>smart</i> "</span>}</div>
+    </article>
+    <!-- console.dir -->
+    <article>
+        <h2 class="monospace">console.dir</h2>
+        <p>Displays an interactive list of the properties of the specified JavaScript object. The output is presented as a hierarchical listing with disclosure triangles that let you see the contents of child objects. <br>Best use for <code>console.dir</code> is for object contain DOM elements.
+            <ul>
+                <li><code>console.log</code> prints the element in an HTML-like tree</li>
+                <li><code>console.dir</code> prints the element in a JSON-like tree</li>
+            </ul>
+        </p>
+        <h3>Syntax</h3>
+        <pre>console.dir(object);</pre>
+        <h3>Example</h3>
+        <pre>console.dir({property: 'smart'});</pre>
+        <div class="bar">
+            <button onclick="console.dir({property: 'smart'});">Test in your browser</button>
+        </div>
+        <p>The output looks like this:</p>
+        <div class="output">
+            <i class="fa fa-caret-right grey" aria-hidden="true"></i> Object</div>
+    </article>
+    <!-- console.warn -->
+    <article>
+        <h2 class="monospace">console.warn</h2>
+        <p>Outputs a warning message with warn icon in front. Useful when informating the user on usage deprecated methods.</p>
+        <h3>Syntax</h3>
+        <pre>console.warn(msg [, msg1, ..., msgN]);</pre>
+        <h3>Example</h3>
+        <pre>console.warn('Mr. Dump is not %d smart.', 2);</pre>
+        <div class="bar">
+            <button onclick="console.warn('Mr. Dump is not %d smart.', 2);">Test in your browser</button>
+        </div>
+        <p>The output looks like this:</p>
+        <div class="output yellow">
+            <i class="fa fa-exclamation-triangle yellow" aria-hidden="true"></i> <i class="fa fa-caret-right grey" aria-hidden="true"></i> Mr. Dump is not <span class="blue">2</span> smart</div>
+    </article>
+    <!-- console.error -->
+    <article>
+        <h2 class="monospace">console.error</h2>
+        <p>Outputs a warning message with warn icon in front. Useful when informating the user on usage deprecated methods.</p>
+        <h3>Syntax</h3>
+        <pre>console.error(msg [, msg1, ..., msgN]);</pre>
+        <h3>Example</h3>
+        <pre>console.error('Mr. Dump is not %d smart.', 2);</pre>
+        <div class="bar">
+            <button onclick="console.error('Mr. Dump is not %d smart.', 2);">Test in your browser</button>
+        </div>
+        <p>The output looks like this:</p>
+        <div class="output red">
+            <i class="fa fa-times-circle red" aria-hidden="true"></i> <i class="fa fa-caret-right grey" aria-hidden="true"></i> <span class="red">Mr. Dump is not 2 smart</span>
+        </div>
+    </article>
+    <!-- console.assert -->
+    <article>
+        <h2 class="monospace">console.assert</h2>
+        <p>Writes an error message to the console if the assertion is false. If the assertion is true, nothing happens.</p>
+        <h3>Syntax</h3>
+        <pre>console.assert(assertion, msg1 [, msg2, ..., msgN]);</pre>
+        <h3>Example</h3>
+        <pre>
+function greaterThan(a,b) {
+  console.assert(a > b, "a (%d) is not greater than b (%d)", a, b});
+}
+greaterThan(5,6);</pre>
+        <div class="bar">
+            <button onclick="var  isValid = false; console.assert(isValid, 'Mr. Dump is not here.');">Test in your browser</button>
+        </div>
+        <p>The output looks like this:</p>
+        <div class="output red">
+            <i class="fa fa-times-circle red" aria-hidden="true"></i> <i class="fa fa-caret-right grey" aria-hidden="true"></i> <span class="red">a (5) is not greater than b (6)</span>
+        </div>
+    </article>
+
+    <article>
+        <h2 class="title">console.table</h2>
+
+    </article>
+
+    <article>
+        <h2 class="monospace">console.clear</h2>
+        <p>Clears the console. <br>If in Chrome the <strong>Preserve log</strong> checkbox is enabled, <code>console.clear()</code> is disabled.</p>
+        <h3>Syntax</h3>
+        <pre>console.clear();</pre>
+    </article>
+
+    <article>
+        <h2 class="title">console group methods</h2>
+
+    </article>
+
+    <article>
+        <h2 class="title">console time methods</h2>
+
+    </article>
+</main>
+<footer>
+   Copyright Jan Nahody 2017
+</footer>
+
+        <script src="main.js"></script>
+    </body>
+</html>
