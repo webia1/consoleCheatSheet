@@ -240,7 +240,7 @@ greaterThan(5,6);</pre>
 // array of strings
 console.table([ ["apples", "oranges", "bananas"] ]);</pre>
                 <div class="bar">
-                    <button onclick="console.table([["apples", "oranges", "bananas"]]);">Test in your browser</button>
+                    <button onclick="console.table([['apples', 'oranges', 'bananas']]);">Test in your browser</button>
                 </div>
                 <h3>Output</h3>
                 <div class="output table">
@@ -323,10 +323,33 @@ console.table(family, ["firstName", "age"]);</pre>
                 <h3>Syntax</h3>
                 <pre>console.clear();</pre>
             </article>
-
+            <!-- console.count -->
             <article>
                 <h2 class="monospace">console.count</h2>
-                <p>Writes the number of times that count() has been invoked at the same line and with the same label.</p>
+                <p>Writes the number of times that count() has been invoked at the same line and with the same label. This function takes an optional argument label</p>
+                <h3>Syntax</h3>
+                <pre>console.count();</pre>
+                <h3>Example</h3>
+                <pre>
+function login(name) {
+  console.count(name + ' logged in');
+}
+
+login("Bob");
+login("Mike");
+login("Bob");
+login("Bob");
+                </pre>
+                <div class="bar">
+                    <button onclick="testCount()">Test in your browser</button>
+                </div>
+                <h3>Output</h3>
+                <div class="output">
+                    <span class="blue">Bob logged in: 1</span><br>
+                    <span class="blue">Mike logged in: 1</span><br>
+                    <span class="blue">Bob logged in: 2</span><br>
+                    <span class="blue">Bob logged in: 3</span>
+                </div>
             </article>
 
             <article>
@@ -334,9 +357,9 @@ console.table(family, ["firstName", "age"]);</pre>
 
             </article>
         </main>
-<footer>
-   Copyright Jan Nahody 2017
-</footer>
+        <footer>
+           Copyright Jan Nahody 2017
+        </footer>
 
         <script src="main.js"></script>
     </body>
