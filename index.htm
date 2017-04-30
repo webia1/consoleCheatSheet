@@ -355,8 +355,52 @@ login("Bob");
             </article>
 
             <article class="grid-item">
-                <h2 class="title">console time methods</h2>
-
+                <h2 class="monospace">console.time</h2>
+                <p>
+                    Starts a new timer. Call console.timeEnd() to stop the timer and print the elapsed time to the Console.         </p>
+                <p>
+                    Pass an optional label to change the output text that precedes the elapsed time. Call console.timeEnd() with the same label to stop the timer.<br> Use labels to run multiple timers at the same time.
+                </p>
+                <h3>Syntax</h3>
+                <pre class="syntax">
+console.time([label]);
+...
+console.timeEnd([label]);
+                </pre>
+                <h3>Example</h3>
+                <pre>
+console.time();
+var arr = new Array(10000);
+for (var i = 0; i < arr.length; i++) {
+  arr[i] = new Object();
+}
+console.timeEnd();
+                </pre>
+                <div class="bar">
+                    <button onclick="testTime()">Test in your browser</button>
+                </div>
+                <h3>Output</h3>
+                <div class="output">
+                    <span class="blue">default: 3.35ms</span>
+                </div>
+                <h3>Example multiple usage</h3>
+                <pre>
+console.time('total');
+console.time('init arr');
+var arr = new Array(10000);
+console.timeEnd('init arr');
+for (var i = 0; i < arr.length; i++) {
+  arr[i] = new Object();
+}
+console.timeEnd('total');
+                </pre>
+                <div class="bar">
+                    <button onclick="testTimeMultiple()">Test in your browser</button>
+                </div>
+                <h3>Output</h3>
+                <div class="output">
+                    <span class="blue">init arr: 0.0720ms</span><br><span class="blue">total: 4.34ms</span>
+                </div>
             </article>
         </main>
         <footer>
