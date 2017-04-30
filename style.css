@@ -184,6 +184,11 @@ main p {
     padding: .625em 0;
 }
 
+main p.note {
+    padding-left: .625em;
+    border-left: 5px solid rgb(253, 179, 0);
+}
+
 main h2 {
     text-align: left;
     font-size: 1.1em;
@@ -233,7 +238,7 @@ main ul li {
 main .output {
     font-family: sans-serif;
     font-size: 1em;
-    margin: 1.25em 0 .625em 0;
+    margin: .625em 0;
     padding: .625em;
     border: 1px dotted rgb(129, 192, 66);
     border-left: 5px solid rgb(129, 192, 66);
@@ -272,6 +277,39 @@ main .output .red {
 
 main .output .yellow {
     color: rgb(253, 179, 0);
+}
+
+main .output.table {
+    border: none;
+    padding: 0;
+}
+
+main .output.table table {
+    width: 100%;
+    font-family: sans-serif;
+    font-size: .9em;
+    border-collapse: collapse;
+    border: 1px solid rgb(160, 160, 160);
+}
+
+main .output.table th, main .output.table td {
+    padding: 1px 5px;
+}
+
+main .output.table th {
+    background-color: rgb(235, 235, 235);
+    font-weight: 400;
+    text-align: left;
+    color: rgb(41, 50, 59);
+    border: 1px solid rgb(160, 160, 160);
+}
+
+main .output.table td {
+    border-left: 1px solid rgb(160, 160, 160);
+}
+
+main .output.table tbody tr:nth-child(even) td {
+    background-color: rgb(230, 238, 250);
 }
 
 main .bar {
