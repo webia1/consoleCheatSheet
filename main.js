@@ -33,4 +33,25 @@ function testCount() {
     login("Bob");
 }
 
+
+function testTime() {
+    console.time();
+    var arr = new Array(10000);
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = new Object();
+    }
+    console.timeEnd();
+}
+
+function testTimeMultiple() {
+    console.time("total");
+    console.time("init arr");
+    var arr = new Array(10000);
+    console.timeEnd("init arr");
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = new Object();
+    }
+    console.timeEnd("total");
+}
+
 const msnry = new Masonry( '.grid', { "itemSelector": ".grid-item" });
