@@ -3,6 +3,7 @@ function resizeArticle(size) {
     for (let i = 0; i < allArticles.length; i++) {
         allArticles[i].style.fontSize = `${size}px`;
     }
+    msnry.layout();
 }
 
 function tableMethod() {
@@ -31,3 +32,5 @@ function testCount() {
     login("Bob");
     login("Bob");
 }
+
+const msnry = new Masonry( '.grid', { "itemSelector": ".grid-item" });

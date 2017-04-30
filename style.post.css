@@ -114,17 +114,11 @@ header {
 }
 
 main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: stretch;
     padding: 10px 10px;
 
     article {
-        flex: 1 0 auto;
-        max-width: 30em;
-        align-self: auto;
+        display: inline-block;
+        width: 30em;
         margin: 1em;
         padding: .625em 1.25em;
         background-color: rgb(246, 247, 249);

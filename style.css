@@ -139,31 +139,12 @@ header .setSize input {
 }
 
 main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -ms-flex-line-pack: stretch;
-        align-content: stretch;
     padding: 10px 10px;
 }
 
 main article {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
-    max-width: 30em;
-    -ms-flex-item-align: auto;
-        -ms-grid-row-align: auto;
-        align-self: auto;
+    display: inline-block;
+    width: 30em;
     margin: 1em;
     padding: .625em 1.25em;
     background-color: rgb(246, 247, 249);

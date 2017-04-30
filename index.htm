@@ -26,8 +26,10 @@
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
         <link rel="stylesheet" href="style.css">
+
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" type="text/javascript"></script>
     </head>
     <body>
 
@@ -45,8 +47,8 @@
                 <img style="position: absolute; top: -5px; right: -5px; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png">
             </a>
         </header>
-        <main>
-            <article class="transparent">
+        <main class="grid">
+            <article class="transparent grid-item">
                <table class="infoTable">
                    <thead>
                        <caption>Console methods overview</caption>
@@ -121,7 +123,7 @@
             </article>
 
             <!-- console.info -->
-            <article>
+            <article class="grid-item">
                 <h2 class="monospace">console.info</h2>
                 <p>Informative logging output with info icon in front.</p>
                 <h3>Syntax</h3>
@@ -151,7 +153,7 @@
                     Mr. Dump is not <span class="blue">2</span> <i class="fa fa-caret-right grey" aria-hidden="true"></i> Object {<span class="violet">property</span>: <span class="red">"<i>smart</i> "</span>}</div>
             </article>
             <!-- console.dir -->
-            <article>
+            <article class="grid-item">
                 <h2 class="monospace">console.dir</h2>
                 <p>Displays an interactive list of the properties of the specified JavaScript object. The output is presented as a hierarchical listing with disclosure triangles that let you see the contents of child objects. <br>Best use for <code>console.dir</code> is for object contain DOM elements.
                     <ul>
@@ -171,7 +173,7 @@
                     <i class="fa fa-caret-right grey" aria-hidden="true"></i> Object</div>
             </article>
             <!-- console.warn -->
-            <article>
+            <article class="grid-item">
                 <h2 class="monospace">console.warn</h2>
                 <p>Outputs a warning message with warn icon in front. Useful when informating the user on usage deprecated methods.</p>
                 <h3>Syntax</h3>
@@ -187,7 +189,7 @@
                 </div>
             </article>
             <!-- console.error -->
-            <article>
+            <article class="grid-item">
                 <h2 class="monospace">console.error</h2>
                 <p>Outputs a warning message with warn icon in front. Useful when informating the user on usage deprecated methods.</p>
                 <h3>Syntax</h3>
@@ -203,7 +205,7 @@
                 </div>
             </article>
             <!-- console.assert -->
-            <article>
+            <article class="grid-item">
                 <h2 class="monospace">console.assert</h2>
                 <p>Writes an error message to the console if the assertion is false. If the assertion is true, nothing happens.</p>
                 <p class="note"><strong>Note:</strong> Specifically, in browsers, calling console.assert() with a falsy assertion will cause the message to be printed to the console without interrupting execution of subsequent code. In Node.js, however, a falsy assertion will cause an AssertionError to be thrown.</p>
@@ -224,7 +226,7 @@ greaterThan(5,6);</pre>
                 </div>
             </article>
             <!-- console.table -->
-            <article>
+            <article class="grid-item">
                 <h2 class="monospace">console.table</h2>
                 <p>This function takes one mandatory argument data, which must be an array or an object, and one additional optional parameter columns.</p>
                 <p class="note">
@@ -317,14 +319,14 @@ console.table(family, ["firstName", "age"]);</pre>
                 </div>
             </article>
             <!-- console.clear -->
-            <article>
+            <article class="grid-item">
                 <h2 class="monospace">console.clear</h2>
                 <p>Clears the console. <br>If in Chrome the <strong>Preserve log</strong> checkbox is enabled, <code>console.clear()</code> is disabled.</p>
                 <h3>Syntax</h3>
                 <pre>console.clear();</pre>
             </article>
             <!-- console.count -->
-            <article>
+            <article class="grid-item">
                 <h2 class="monospace">console.count</h2>
                 <p>Writes the number of times that count() has been invoked at the same line and with the same label. This function takes an optional argument label</p>
                 <h3>Syntax</h3>
@@ -352,7 +354,7 @@ login("Bob");
                 </div>
             </article>
 
-            <article>
+            <article class="grid-item">
                 <h2 class="title">console time methods</h2>
 
             </article>
