@@ -54,4 +54,34 @@ function testTimeMultiple() {
     console.timeEnd("total");
 }
 
+function testGroup() {
+    function name(obj) {
+        console.group('name');
+        console.log('first: ', obj.first);
+        console.log('middle: ', obj.middle);
+        console.log('last: ', obj.last);
+        console.groupEnd();
+    }
+
+    name({"first":"Wile","middle":"E","last":"Coyote"});
+}
+
+function testGroupNested() {
+    function name(obj) {
+      console.group('name');
+      console.log('first: ', obj.first);
+      console.log('middle: ', obj.middle);
+      console.log('last: ', obj.last);
+      console.groupEnd();
+    }
+
+    function doStuff() {
+      console.group('doStuff()');
+      name({"first":"Wile","middle":"E","last":"coyote"});
+      console.groupEnd();
+    }
+
+    doStuff();
+}
+
 const msnry = new Masonry( '.grid', { "itemSelector": ".grid-item" });
