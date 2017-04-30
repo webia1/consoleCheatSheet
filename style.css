@@ -227,7 +227,7 @@ main ul li {
 }
 
 main .output {
-    font-family: sans-serif;
+    font-family: monospace;
     font-size: 1em;
     margin: .625em 0;
     padding: .625em;
@@ -262,6 +262,11 @@ main .output .red {
 
 main .output .yellow {
     color: rgb(253, 179, 0);
+}
+
+main .output .tab {
+    display: inline-block;
+    width: 1em;
 }
 
 main .output.table {

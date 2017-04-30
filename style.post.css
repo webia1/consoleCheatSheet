@@ -200,7 +200,7 @@ main {
     }
 
     .output {
-        font-family: sans-serif;
+        font-family: monospace;
         font-size: 1em;
         margin: .625em 0;
         padding: .625em;
@@ -234,6 +234,11 @@ main {
 
         .yellow {
             color: var(--color-yellow);
+        }
+
+        .tab {
+            display: inline-block;
+            width: 1em;
         }
 
         &.table {
