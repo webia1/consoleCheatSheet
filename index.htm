@@ -152,7 +152,40 @@
                    </tbody>
                </table>
             </article>
-
+            <!-- Substitution string -->
+            <article class="transparent grid-item">
+               <table class="infoTable">
+                   <thead>
+                       <caption>Substitution string</caption>
+                       <tr>
+                           <th>Substitution<br>string</th>
+                           <th>Description</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr>
+                           <td>%o or %O</td>
+                           <td>Outputs a JavaScript object. Clicking the object name opens more information about it in the inspector.</td>
+                       </tr>
+                       <tr>
+                           <td>%d or %i</td>
+                           <td>Outputs a digit/integer. Number formatting is supported, for example  console.log("Foo %.2d", 1.1) will output the number as two significant figures with a leading 0: Foo 01</td>
+                       </tr>
+                       <tr>
+                           <td>%s</td>
+                           <td>Outputs a string.</td>
+                       </tr>
+                       <tr>
+                           <td>%f</td>
+                           <td>Outputs a floating-point value. Formatting is supported, for example  console.log("Foo %.2f", 1.1) will output the number to 2 decimal places: Foo 1.10</td>
+                       </tr>
+                       <tr>
+                           <td>%c</td>
+                           <td>Use the <code>%c</code> directive to apply a CSS style to console output.<br><br><code>console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");</code><br><br>This is <span style="color: yellow; font-style: italic; background-color: blue;padding: 2px">My stylish message</span><br></td>
+                       </tr>
+                   </tbody>
+               </table>
+            </article>
             <!-- console.info -->
             <article class="grid-item">
                 <h2 class="monospace">console.info</h2>
