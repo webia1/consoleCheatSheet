@@ -551,6 +551,21 @@ console.groupEnd(msg [, msg1, ..., msgN]);
                <h3>Syntax</h3>
                <pre class="syntax">console.timeStamp([label]);</pre>
             </article>
+            <!-- console.profile -->
+            <article class="grid-item">
+                <h2 class="monospace">console.profile</h2>
+                <p>Starts a JavaScript CPU profile with an optional label. To complete the profile, call console.profileEnd(). Each profile is added to the <strong>Profiles</strong> panel.</p>
+                <h3>Syntax</h3>
+                <pre class="syntax">console.profile([label]);</pre>
+                <h3>Example</h3>
+                <pre>
+function processPixels() {
+    console.profile("processPixels()");
+    // later, after processing pixels
+    console.profileEnd();
+}
+                </pre>
+            </article>
         </main>
         <footer>
            Copyright Jan Nahody 2017
