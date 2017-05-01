@@ -2,7 +2,7 @@
   "name": "console_cheat_sheet",
   "version": "1.0.0",
   "description": "Javascript cheat sheet for console methods",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,5 +13,5 @@
     "sheet"
   ],
   "author": "Jan Nahody <jan.nahody@gmail.com>",
-  "license": "ISC"
+  "license": "CC-BY-NC-ND-4.0"
 }
